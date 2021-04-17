@@ -60,11 +60,17 @@ public class Program
 		
 		System.out.println("TAXES PAID");
 		
-		
+		double total = 0;
 		for(Pessoa p : list)
 		{
 			System.out.println(p.getNome() + ": " + String.format("%.2f",p.impostoPago()) + " €");
+			
+			 total += p.impostoPago();
 		}
+		
+		System.out.println();
+		
+		System.out.println("TOTAL TAXES: " + total);
 		
 		sc.close();
 	}
